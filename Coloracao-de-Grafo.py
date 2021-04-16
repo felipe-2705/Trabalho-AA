@@ -64,17 +64,43 @@ class Grafo:
 
 ############################################ GRAPH COLOR SECTION ####################################################
 
+
+
+def colore_grafo(grafo):
+    #### para cada vertice i do grafo vamos olhar todas a cores de seus vizinhos
+    i = 0
+    for i in range(grafo.get_vertices_number()):
+        colors = []
+        for vertice in grafo.vertice_get_arestas(i):
+             colors.append(grafo.vertice_get_value(vertice))
+        color = 1
+        able = True
+        while True:       ### enquanto nao encontrarmos uma cor possivel de colorir esse vertice 
+            for c in colors:
+                ### verificamos se os visinhos possuem esta cor     
+                if color == c:
+                    ### caso um visinho tenha a mesma cor desabilite a flag     
+                    able = False
+                    break
+            if able == True:
+                ### caso esteja abilitada significa que a cor pode ser aplicada a este vertice 
+                break
+            color += 1
+            able =True
+        grafo.vertice_set_value(i,color) ## atribuimos a cor para o vertice i 
+
+
 ### ler grafo de um arquivo csv 
 arquivo_grafo =  "grafo1.csv"
+cores = ["vermelhor","azul","verde"]
 grafo = Grafo()
 ### lendo vertices do arquvio 
 with open(arquivo_grafo,newline='') as csv_file: 
     csv_leitor  = csv.reader(csv_file,delimiter=',')
-    i = 0
     for arestas in csv_leitor:
-        v  = Vertice(i,[])
+        v  = Vertice(0,[])
         grafo.insere_vertice(v)
-        i+=1
+
 ### lendo arestas 
 with open(arquivo_grafo,newline='') as csv_file: 
     csv_leitor  = csv.reader(csv_file,delimiter=',')
@@ -86,3 +112,13 @@ with open(arquivo_grafo,newline='') as csv_file:
             grafo.insere_aresta(i,aresta)
         i+=1
 
+colore_grafo(grafo)
+
+i = 0 
+for i in range(grafo.get_vertices_number()):
+    print(grafo.vertice_get_arestas(i))
+
+
+i = 0 
+for i in range(grafo.get_vertices_number()):
+    print("vertice[",i,"]"," : ",cores[grafo.vertice_get_value(i)-1])
