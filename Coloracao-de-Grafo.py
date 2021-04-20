@@ -2,8 +2,9 @@
 ### Professor: Paulo Henrique 
 ### Alunos: Felipe Augusto Ferreira de Castro | Matrícula: 11711BCC033 
 
-import csv 
-
+import csv
+import time 
+import timeit
 #################### GRAPH DEFINITION SECTION #################################
 class Vertice:
     def __init__(self,value,arestas):
@@ -89,10 +90,14 @@ def colore_grafo(grafo):
             able =True
         grafo.vertice_set_value(i,color) ## atribuimos a cor para o vertice i 
 
+def reset_grafo_color(grafo):
+    i=0
+    for i in range(grafo.get_vertices_number()):
+        grafo.vertice_set_value(i,0)
 
 ### ler grafo de um arquivo csv 
-arquivo_grafo =  "grafo1.csv"
-cores = ["vermelhor","azul","verde"]
+arquivo_grafo =  "./grafos/grafo4.csv"
+cores = ["vermelho","azul","verde","Amarelo","Preto","Branco"]
 grafo = Grafo()
 ### lendo vertices do arquvio 
 with open(arquivo_grafo,newline='') as csv_file: 
@@ -111,14 +116,25 @@ with open(arquivo_grafo,newline='') as csv_file:
         for aresta in arestas:
             grafo.insere_aresta(i,aresta)
         i+=1
+tempo_medio = 0        
+i=0
+for i in range(30):
+    start_time = time.time_ns()
+    colore_grafo(grafo)
+    tempo_execucao = time.time_ns() - start_time
+    print("Tempo de Excecucao[",i,"]: ",tempo_execucao," segundos")
+    i += 1
+    tempo_medio += tempo_execucao
+    reset_grafo_color(grafo)
 
-colore_grafo(grafo)
-
-i = 0 
-for i in range(grafo.get_vertices_number()):
-    print(grafo.vertice_get_arestas(i))
+print("Tempo Medio: ", tempo_medio/30)
+#imprime grafico 
+#i = 0 
+#for i in range(grafo.get_vertices_number()):
+#    print(grafo.vertice_get_arestas(i))
 
 
 i = 0 
 for i in range(grafo.get_vertices_number()):
     print("vertice[",i,"]"," : ",cores[grafo.vertice_get_value(i)-1])
+
