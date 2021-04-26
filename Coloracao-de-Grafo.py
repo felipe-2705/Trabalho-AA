@@ -96,45 +96,53 @@ def reset_grafo_color(grafo):
         grafo.vertice_set_value(i,0)
 
 ### ler grafo de um arquivo csv 
-arquivo_grafo =  "./grafos/grafo4.csv"
-cores = ["vermelho","azul","verde","Amarelo","Preto","Branco"]
+arquivo_grafo =  "./grafos/grafo5.dimacs"
+cores = ["vermelho","azul","verde","Amarelo","Preto","Branco","Roxo","Laranja","Beje","azul-claro","Majenta"]
 grafo = Grafo()
-### lendo vertices do arquvio 
-with open(arquivo_grafo,newline='') as csv_file: 
-    csv_leitor  = csv.reader(csv_file,delimiter=',')
-    for arestas in csv_leitor:
-        v  = Vertice(0,[])
+### lendo arquivo 
+with open(arquivo_grafo, "r") as graph_file: 
+    line = graph_file.readline()
+    line = line.split()
+    vertices = int(line[2])
+    arestas = int(line[3])
+    print(vertices)
+    ### insere vertices no grafo
+    i= 0
+    for i in range(vertices):
+        v = Vertice(0,[])
         grafo.insere_vertice(v)
-
-### lendo arestas 
-with open(arquivo_grafo,newline='') as csv_file: 
-    csv_leitor  = csv.reader(csv_file,delimiter=',')
-    max_line =  grafo.get_vertices_number()/2
-    i = 0
-    for arestas in csv_leitor:
-        arestas = list(map(int,arestas)) ## converte de string para inteiro 
-        for aresta in arestas:
-            grafo.insere_aresta(i,aresta)
         i+=1
+        print(i)
+    # insere arestas 
+    while 1:
+        line =graph_file.readline()
+        if line == "":
+            break
+        line = line.split()
+        vertice1 = int(line[1])
+        vertice2 = int(line[2])
+        print(vertice1,vertice2)
+        grafo.insere_aresta(vertice1-1,vertice2-1)
+
 tempo_medio = 0        
 i=0
 for i in range(30):
-    start_time = time.time_ns()
+    start_time = time.time()
     colore_grafo(grafo)
-    tempo_execucao = time.time_ns() - start_time
-    print("Tempo de Excecucao[",i,"]: ",tempo_execucao," segundos")
+    tempo_execucao = time.time() - start_time
+    print("Tempo de Excecucao[",i,"]: ",round(tempo_execucao,4)," segundos")
     i += 1
     tempo_medio += tempo_execucao
     reset_grafo_color(grafo)
 
-print("Tempo Medio: ", tempo_medio/30)
+print("Tempo Medio: ", str(round(tempo_medio/30,4)))
 #imprime grafico 
 #i = 0 
 #for i in range(grafo.get_vertices_number()):
 #    print(grafo.vertice_get_arestas(i))
 
 
-i = 0 
-for i in range(grafo.get_vertices_number()):
-    print("vertice[",i,"]"," : ",cores[grafo.vertice_get_value(i)-1])
+#i = 0 
+#for i in range(grafo.get_vertices_number()):
+#    print("vertice[",i,"]"," : ",cores[grafo.vertice_get_value(i)-1])
 
