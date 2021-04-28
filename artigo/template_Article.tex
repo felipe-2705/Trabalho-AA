@@ -8,12 +8,15 @@
 \graphicspath{{./grafos/}{./}} % where to search for the images
 
 %opening
-\title{Trabalho de Analise de Algoritmos}
-\author{Felipe Augusto Ferreira de Castro}
-
+\titulo{Trabalho de Analise de Algoritmos}
+\autor{Felipe Augusto Ferreira de Castro \textbf{Matrícula:} 11711BCC033\\Sarah Hanna VB  Silva \textbf{Matrícula:} 11621BCC021\\ Renata Cristina Gomes da Silva \textbf{Matrícula:} 11721BCC012}
+\data{2021}
+\local{Universidade Federal de Uberlândia}
 \begin{document}
 
-\maketitle
+\imprimircapa
+\newpage
+\tableofcontents
 
 \chapter{Coloração de Grafos}
 
@@ -60,10 +63,72 @@ primeiro vertice do grafo\;
 
 Explicando de maneira mais informal o algoritmo se resume em alguns passos:
 \begin{itemize}
-	\item Para cada vertice $v$ do grafo $G$ vamos olhar as cores de seus vertices adjacentes;
-	\item vamos avançando da lista de cores ate encontrar uma cor a qual não foi atribuida a nenhum vertice adjacente a $v$;
-	\item atribuimos a cor encontrada ao vertice $v$; 
+	\item Para cada vértice $v$ do grafo $G$ vamos olhar as cores de seus vertices adjacentes;
+	\item vamos avançando da lista de cores ate encontrar uma cor a qual não foi atribuida a nenhum vértice adjacente a $v$;
+	\item atribuímos a cor encontrada ao vertice $v$; 
 \end{itemize}
 
+\section{Estrutura de dados}
+Visto o algoritmo para coloração apresentado na seção anterior foi decidido estruturar o grafo de maneira a facilitar encontrar os vértices adjacentes de cada vértice $v$  do grafo $G$. Desta forma, cada vértice é uma estrutura que possui duas informações:
+\begin{itemize}
+	\item valor da cor atribuída ao vértice;
+	\item uma lista de identificadores dos vértices adjacentes;
+\end{itemize}
 
+A identificação do vértice adjacente $vd$ é feita com um indexador da posição de $vd$ na lista de vértices do grafo $G$.
+
+A Estrutura do grafo é constituída de duas informações: 
+\begin{itemize}
+	\item Lista de vértices presentes no grafo(o indexador do vértice nessa lista é o identificador do vértice);
+	\item quantidade de arestas presentes no grafo;
+\end{itemize}
+
+Utilizando desta estrutura encontrar os vértices adjacentes de um vértice $v$ se resume a apenas percorrer uma lista, excluída a necessidade de verificar se o vértice $vd$ é adjacente a $v$.
+
+\section{Desenvolvimento do Trabalho}
+O programa foi desenvolvido na linguagem Python devido a facilidade de encontrar ferramentas prontas para manipular estruturas de dados e o conhecimento prévio que os autores deste trabalho tinham sobre a linguagem. Além disso, o ambiente de desenvolvimento  usado foi o Visual Studio Code.
+
+
+\subsection{Grafos}   
+Quantos aos grafos, foram utilizados 5 grafos, no formato DIMACS, os quais serão apresentados a seguir. 
+
+\begin{enumerate}
+	\item 	\textbf{Grafo 1} \newline
+		vertices: 10 , arestas: 15,
+		a 0 1, \newline
+		a 0 2, \newline
+		a 0 3, \newline
+		a 1 4, \newline
+		a 1 8, \newline
+		a 2 6, \newline
+		a 2 7, \newline
+		a 3 5, \newline
+		a 3 9, \newline
+		a 4 5, \newline
+		a 4 7, \newline
+		a 5 6, \newline
+		a 6 8, \newline
+		a 7 9, \newline
+		a 8 9;
+		
+		Fonte: O enunciado deste trabalho
+	\item \textbf{Grafo 2} \newline 
+		vertices: 9, arestas: 14, \newline
+		a 0 3, \newline
+		a 0 1, \newline
+		a 1 2, \newline
+		a 1 3, \newline
+		a 2 4, \newline
+		a 3 4, \newline
+		a 3 6, \newline
+		a 3 7, \newline
+		a 4 5, \newline
+		a 4 7, \newline
+		a 4 8, \newline
+		a 5 8, \newline
+		a 6 7, \newline
+		a 7 8;
+		
+		Fonte: https://coloringbee.blogspot.com/2018/09/coloring-graph-example.html
+\end{enumerate}
 \end{document}
