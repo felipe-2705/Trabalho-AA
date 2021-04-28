@@ -1,0 +1,69 @@
+\documentclass[12pt,openright,oneside,a4paper,brazil]{abntex2}
+
+
+\usepackage{amsmath}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{graphicx}
+\usepackage[ruled,vlined]{algorithm2e}
+\graphicspath{{./grafos/}{./}} % where to search for the images
+
+%opening
+\title{Trabalho de Analise de Algoritmos}
+\author{Felipe Augusto Ferreira de Castro}
+
+\begin{document}
+
+\maketitle
+
+\chapter{Coloração de Grafos}
+
+\section{Pseudo-código}
+
+O problema de coloração de grafos é um problema bastante discutido na literatura da área e possui vários algoritmos para soluciona-lo. Portanto, nesta seção apresentaremos o algoritmo usado em nosso trabalho para encontrar a disposição de cores e posteriormente discutiremos a eficiência do algoritmo. A seguir o algoritmo utilizado apresentado em pseudo-código.\linebreak
+
+\begin{algorithm}[H]
+\SetAlgoLined
+\KwIn{grafo}
+\KwOut{Lista com as cores de cada vertice}
+declare uma variavel flag;
+
+faça flag = verdadeiro;
+
+atribua a cor 0 para todos os vertices do grafo\;
+
+primeiro vertice do grafo\; 
+
+\While{não atribuido uma cor a todos os vertices}{	
+	
+	\While{para todos os vertices adjacentes }
+	{ 
+		olhe a cor do vertice adjacente\;
+		
+		\eIf{possui a mesma cor que o vertice adjacente}
+		{
+			
+		 faça flag = falso\;
+		 	
+		 pare o laço\;		
+		}{}
+	}
+	\eIf{flag =  verdadeiro}{
+		proximo vertice;
+		
+	}{  
+		faça flag = verdadeiro\;
+	    some 1 a cor deste vertice\;
+	}
+}
+\caption{Coloraçao de Grafos}
+\end{algorithm}
+
+Explicando de maneira mais informal o algoritmo se resume em alguns passos:
+\begin{itemize}
+	\item Para cada vertice $v$ do grafo $G$ vamos olhar as cores de seus vertices adjacentes;
+	\item vamos avançando da lista de cores ate encontrar uma cor a qual não foi atribuida a nenhum vertice adjacente a $v$;
+	\item atribuimos a cor encontrada ao vertice $v$; 
+\end{itemize}
+
+
+\end{document}
