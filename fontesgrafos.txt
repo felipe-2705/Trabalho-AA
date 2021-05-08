@@ -1,3 +1,0 @@
-grafo2: https://coloringbee.blogspot.com/2018/09/coloring-graph-example.html
-grafo3e4:https://handwiki.org/wiki/Grundy_number
-grafo5: https://blog.cryptographyengineering.com/2014/11/27/zero-knowledge-proofs-illustrated-primer/

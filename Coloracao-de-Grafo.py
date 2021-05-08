@@ -5,6 +5,8 @@
 import csv
 import time 
 import timeit
+import statistics as st
+import matplotlib.pyplot as plt
 #################### GRAPH DEFINITION SECTION #################################
 class Vertice:
     def __init__(self,value,arestas):
@@ -96,7 +98,7 @@ def reset_grafo_color(grafo):
         grafo.vertice_set_value(i,0)
 
 ### ler grafo de um arquivo csv 
-arquivo_grafo =  "./grafos/grafo5.dimacs"
+arquivo_grafo =  "./grafos/grafo1.dimacs"
 cores = ["vermelho","azul","verde","Amarelo","Preto","Branco","Roxo","Laranja","Beje","azul-claro","Majenta"]
 grafo = Grafo()
 ### lendo arquivo 
@@ -105,14 +107,13 @@ with open(arquivo_grafo, "r") as graph_file:
     line = line.split()
     vertices = int(line[2])
     arestas = int(line[3])
-    print(vertices)
     ### insere vertices no grafo
     i= 0
     for i in range(vertices):
         v = Vertice(0,[])
         grafo.insere_vertice(v)
         i+=1
-        print(i)
+
     # insere arestas 
     while 1:
         line =graph_file.readline()
@@ -121,28 +122,37 @@ with open(arquivo_grafo, "r") as graph_file:
         line = line.split()
         vertice1 = int(line[1])
         vertice2 = int(line[2])
-        print(vertice1,vertice2)
+       # print(vertice1, vertice2) ### debug 
         grafo.insere_aresta(vertice1-1,vertice2-1)
 
-tempo_medio = 0        
+      
 i=0
-for i in range(30):
+tempos = []
+x = []
+for i in range(100):
+    x.append(i+1)
     start_time = time.time()
     colore_grafo(grafo)
     tempo_execucao = time.time() - start_time
-    print("Tempo de Excecucao[",i,"]: ",round(tempo_execucao,4)," segundos")
+    tempos.append(tempo_execucao)
     i += 1
-    tempo_medio += tempo_execucao
     reset_grafo_color(grafo)
 
-print("Tempo Medio: ", str(round(tempo_medio/30,4)))
+plt.plot(x,tempos,color='red',label='tempo de execucao')
+plt.plot(x,[st.fmean(tempos)]*100,color='blue',label='media')
+print("desvio padrao:",str(st.stdev(tempos)))
+##plt.plot(x,[st.stdev(tempos)]*100,color='green',label='desvio padrao')
+plt.xlabel('Execucao')
+plt.ylabel('Tempo de Execucao')
+plt.legend()
+plt.show()
 #imprime grafico 
 #i = 0 
 #for i in range(grafo.get_vertices_number()):
 #    print(grafo.vertice_get_arestas(i))
+colore_grafo(grafo)
 
-
-#i = 0 
-#for i in range(grafo.get_vertices_number()):
-#    print("vertice[",i,"]"," : ",cores[grafo.vertice_get_value(i)-1])
+i = 0 
+for i in range(grafo.get_vertices_number()):
+    print("vertice[",i,"]"," : ",cores[grafo.vertice_get_value(i)])
 
