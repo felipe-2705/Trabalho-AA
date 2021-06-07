@@ -22,7 +22,7 @@
 
 \section{Pseudo-código}
 
-O problema de coloração de grafos é um problema bastante discutido na literatura da área e possui vários algoritmos para soluciona-lo. Portanto, nesta seção apresentaremos o algoritmo usado em nosso trabalho para encontrar a disposição de cores e posteriormente discutiremos a eficiência do algoritmo. A seguir o algoritmo utilizado apresentado em pseudo-código.\linebreak
+O problema de coloração de grafos é um problema bastante discutido na literatura da área e possui vários algoritmos para soluciona-lo. Portanto, nesta seção apresentaremos o algoritmo usado em nosso trabalho para encontrar a disposição de cores e posteriormente discutiremos a eficiência do algoritmo. A seguir o algoritmo utilizado apresentado em pseudo-código.\\
 
 \begin{algorithm}[H]
 \SetAlgoLined
@@ -251,5 +251,26 @@ Quanto aos tempos de execução podemos ver que para os grafo 1 ao 4 permanece b
 \section{Vídeo}
 O vídeo apresentando uma execuçao desse trabalho encontra-se em : \url{https://web.microsoftstream.com/video/05dafa84-e1f3-44f9-b7fe-269058867a08}
 
-\chapter{Caixeiro Viajante}    
+\chapter{Caixeiro Viajante} 
+
+Este algoritmo foi desenvolvido em python e pode ser encontrado em \url{https://github.com/felipe-2705/Trabalho-AA/tree/master/caixeiro}. Tanto os códigos quanto o grafo se encontram nesse link. 
+Sobre o grafo, não será apresentado aqui por ser muito extenso constituído de 38 vértices e 1444 arestas. Porém pode ser acessado no link citado anteriormente. Este grafo é dividido em um arquivo de distancias ("distancia.txt") e um com os dados dos vértices ("cidades.txt").  
+
+\section{Resultados}
+O algoritmo percorreu caminhos com 38 entradas obtendo os seguintes resultados: 
+      \begin{enumerate}
+      	\item Execução:	\\
+			\includegraphics[scale=0.8]{caixeiro-execução1.png}
+      	\item Execução:\\
+			\includegraphics[scale=0.8]{caixeiro-execução2.png}		
+      	\item Execução:\\
+			\includegraphics[scale=0.8]{caixeiro-execução3.png}		
+      	\item Execução:\\
+			\includegraphics[scale=0.8]{caixeiro-execução4.png}
+      	\item Execução:\\
+			\includegraphics[scale=0.8]{caixeiro-execução6.png}		    	
+      \end{enumerate}
+A seguir apresentamos o gráficos dos resultados, no eixo y temos cada grafo sendo correspondente a uma execução e no eixo x o tempo de execução, em segundos, gasto para concluir o algoritmo.\\
+		      	\includegraphics[scale=0.8]{execução.png}		\\
+Ao final dos testes foi obtido um tempo médio de 28119 segundos com um desvio padrão de 1199 segundos. 
 \end{document}
