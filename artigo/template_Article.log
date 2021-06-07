@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.18)  8 MAY 2021 14:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.2.18)  6 JUN 2021 20:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -818,12 +818,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
 [2
 
 ] [3]
-<./imagens/grafo1.png, id=48, 206.27063pt x 154.32657pt>
+<./imagens/grafo1.png, id=50, 206.27063pt x 154.32657pt>
 File: ./imagens/grafo1.png Graphic file (type png)
 <use ./imagens/grafo1.png>
 Package pdftex.def Info: ./imagens/grafo1.png  used on input line 114.
 (pdftex.def)             Requested size: 142.26378pt x 106.43832pt.
-<./imagens/grafo2.png, id=50, 298.86656pt x 243.91125pt>
+<./imagens/grafo2.png, id=52, 298.86656pt x 243.91125pt>
 File: ./imagens/grafo2.png Graphic file (type png)
 <use ./imagens/grafo2.png>
 Package pdftex.def Info: ./imagens/grafo2.png  used on input line 135.
@@ -834,13 +834,13 @@ Overfull \hbox (6.9648pt too wide) in paragraph at lines 137--138
  . com / 2018 / 09 / coloring-[]graph-[]example .
  []
 
-<./imagens/grafo3.png, id=58, 420.06938pt x 560.0925pt>
+<./imagens/grafo3.png, id=60, 420.06938pt x 560.0925pt>
 File: ./imagens/grafo3.png Graphic file (type png)
 <use ./imagens/grafo3.png>
 Package pdftex.def Info: ./imagens/grafo3.png  used on input line 153.
 (pdftex.def)             Requested size: 113.81123pt x 142.2619pt.
 [5 <./imagens/grafo2.png> <./imagens/grafo3.png>]
-<./imagens/grafo4.png, id=70, 326.1786pt x 199.7061pt>
+<./imagens/grafo4.png, id=72, 326.1786pt x 199.7061pt>
 File: ./imagens/grafo4.png Graphic file (type png)
 <use ./imagens/grafo4.png>
 Package pdftex.def Info: ./imagens/grafo4.png  used on input line 172.
@@ -852,7 +852,7 @@ ineering . com / 2014 / 11 / 27 / zero-[]knowledge-[]proofs-[]illustrated-[]pri
 mer/$[] 
  []
 
-<./imagens/Coloracao-grafo1.png, id=74, 194.97844pt x 146.04562pt>
+<./imagens/Coloracao-grafo1.png, id=76, 194.97844pt x 146.04562pt>
 File: ./imagens/Coloracao-grafo1.png Graphic file (type png)
 <use ./imagens/Coloracao-grafo1.png>
 Package pdftex.def Info: ./imagens/Coloracao-grafo1.png  used on input line 187
@@ -862,13 +862,13 @@ File: ./imagens/grafo1.png Graphic file (type png)
 <use ./imagens/grafo1.png>
 Package pdftex.def Info: ./imagens/grafo1.png  used on input line 188.
 (pdftex.def)             Requested size: 142.26378pt x 106.43832pt.
-<./imagens/grafico-grafo1.png, id=75, 452.4403pt x 360.59718pt>
+<./imagens/grafico-grafo1.png, id=77, 452.4403pt x 360.59718pt>
 File: ./imagens/grafico-grafo1.png Graphic file (type png)
 <use ./imagens/grafico-grafo1.png>
 Package pdftex.def Info: ./imagens/grafico-grafo1.png  used on input line 194.
 (pdftex.def)             Requested size: 227.62105pt x 227.62311pt.
 [6 <./imagens/grafo4.png (PNG copy)> <./imagens/Coloracao-grafo1.PNG>]
-<./imagens/Coloracao-grafo2.png, id=85, 173.14688pt x 128.73094pt>
+<./imagens/Coloracao-grafo2.png, id=87, 173.14688pt x 128.73094pt>
 File: ./imagens/Coloracao-grafo2.png Graphic file (type png)
 <use ./imagens/Coloracao-grafo2.png>
 Package pdftex.def Info: ./imagens/Coloracao-grafo2.png  used on input line 199
@@ -878,14 +878,14 @@ File: ./imagens/grafo2.png Graphic file (type png)
 <use ./imagens/grafo2.png>
 Package pdftex.def Info: ./imagens/grafo2.png  used on input line 200.
 (pdftex.def)             Requested size: 142.26378pt x 116.10468pt.
-<./imagens/grafico-grafo2.png, id=86, 456.95718pt x 353.06906pt>
+<./imagens/grafico-grafo2.png, id=88, 456.95718pt x 353.06906pt>
 File: ./imagens/grafico-grafo2.png Graphic file (type png)
 <use ./imagens/grafico-grafo2.png>
 Package pdftex.def Info: ./imagens/grafico-grafo2.png  used on input line 206.
 (pdftex.def)             Requested size: 227.62039pt x 227.62274pt.
  [7 <./imagens/grafico-grafo1.PNG> <./imagens/Coloracao-grafo2.PNG> <./imagens/
 grafico-grafo2.PNG>]
-<./imagens/Coloracao-grafo3.png, id=95, 170.88844pt x 115.93312pt>
+<./imagens/Coloracao-grafo3.png, id=97, 170.88844pt x 115.93312pt>
 File: ./imagens/Coloracao-grafo3.png Graphic file (type png)
 <use ./imagens/Coloracao-grafo3.png>
 Package pdftex.def Info: ./imagens/Coloracao-grafo3.png  used on input line 212
@@ -895,12 +895,12 @@ File: ./imagens/grafo3.png Graphic file (type png)
 <use ./imagens/grafo3.png>
 Package pdftex.def Info: ./imagens/grafo3.png  used on input line 213.
 (pdftex.def)             Requested size: 113.81123pt x 142.2619pt.
-<./imagens/grafico-grafo3.png, id=96, 478.78876pt x 325.96782pt>
+<./imagens/grafico-grafo3.png, id=98, 478.78876pt x 325.96782pt>
 File: ./imagens/grafico-grafo3.png Graphic file (type png)
 <use ./imagens/grafico-grafo3.png>
 Package pdftex.def Info: ./imagens/grafico-grafo3.png  used on input line 219.
 (pdftex.def)             Requested size: 227.62427pt x 227.62878pt.
-<./imagens/Coloracao-grafo4.png, id=97, 212.29312pt x 158.09062pt>
+<./imagens/Coloracao-grafo4.png, id=99, 212.29312pt x 158.09062pt>
 File: ./imagens/Coloracao-grafo4.png Graphic file (type png)
 <use ./imagens/Coloracao-grafo4.png>
 Package pdftex.def Info: ./imagens/Coloracao-grafo4.png  used on input line 225
@@ -910,14 +910,14 @@ File: ./imagens/grafo4.png Graphic file (type png)
 <use ./imagens/grafo4.png>
 Package pdftex.def Info: ./imagens/grafo4.png  used on input line 226.
 (pdftex.def)             Requested size: 142.26378pt x 87.10304pt.
-<./imagens/grafico-grafo4.png, id=98, 475.02469pt x 342.5297pt>
+<./imagens/grafico-grafo4.png, id=100, 475.02469pt x 342.5297pt>
 File: ./imagens/grafico-grafo4.png Graphic file (type png)
 <use ./imagens/grafico-grafo4.png>
 Package pdftex.def Info: ./imagens/grafico-grafo4.png  used on input line 232.
 (pdftex.def)             Requested size: 227.62509pt x 227.6278pt.
  [8 <./imagens/Coloracao-grafo3.PNG> <./imagens/grafico-grafo3.PNG> <./imagens/
 Coloracao-grafo4.PNG>]
-<./imagens/grafico-grafo5.png, id=108, 477.28313pt x 341.77687pt>
+<./imagens/grafico-grafo5.png, id=110, 477.28313pt x 341.77687pt>
 File: ./imagens/grafico-grafo5.png Graphic file (type png)
 <use ./imagens/grafico-grafo5.png>
 Package pdftex.def Info: ./imagens/grafico-grafo5.png  used on input line 242.
@@ -951,10 +951,10 @@ s/cm/cmss17.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
 bx10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
 <c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texli
 ve/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on template_Article.pdf (11 pages, 535454 bytes).
+Output written on template_Article.pdf (11 pages, 535970 bytes).
 PDF statistics:
- 194 PDF objects out of 1000 (max. 8388607)
- 144 compressed objects within 2 object streams
+ 195 PDF objects out of 1000 (max. 8388607)
+ 145 compressed objects within 2 object streams
  32 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 
